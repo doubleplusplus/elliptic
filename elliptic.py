@@ -40,10 +40,10 @@ def elli_add(a, b, p, x1, y1, x2, y2):
 
 def q2():
     a = 2
-    b = 2
-    p = 17
-    x1, y1 = 6, 3
-    x2, y2 = 5, 1
+    b = 3
+    p = 13
+    x1, y1 = 0, 4
+    x2, y2 = 0, 4
     x3, y3 = elli_add(a, b, p, x1, y1, x2, y2)
     print(x3, y3)
     print(verify(x3, y3, a, b, p))
@@ -58,6 +58,9 @@ def double_and_add(a, b, p, x, y, n):
         if i == '1':
             xt, yt = elli_add(a, b, p, xt, yt, x, y)
     return xt, yt
+
+# verify q2 answers
+#print(double_and_add(2, 3, 13, 0, 4, 8))
 
 def q4():
     import numpy as np
