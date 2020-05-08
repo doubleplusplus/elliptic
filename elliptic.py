@@ -20,8 +20,6 @@ def get_s(a, p, x1, x2, y1, y2):
         s = ((x1**2 * 3 + a ) * mod_inv(2 * y1, p)) % p
     else:
         de = x2 - x1
-        if de == 0:
-            print(x1, y1, x2, y2)
         while de < 0:
             de += p
         s = ((y2 - y1) * mod_inv(de, p)) % p
@@ -64,9 +62,9 @@ def double_and_add(a, b, p, x, y, n):
 def q4():
     import numpy as np
     p = 1579602854473772853128287506817718026426265023617379175335587248616431
-    #lower = p + 1 - 2 * np.sqrt(float(p))
-    #higher = p + 1 + 2 * np.sqrt(float(p))
-    #print(lower, higher)
+    lower = p + 1 - 2 * np.sqrt(float(p))
+    higher = p + 1 + 2 * np.sqrt(float(p))
+    print('bound', lower, higher)
 
     a = 654624412321892857559038596828572669649402987879847772735693306089759
     b = 563386056159714380473737077729260896240517015706612537779563193095411
